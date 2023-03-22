@@ -1,9 +1,16 @@
 .navbar-size {
 
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     background-color: #949494;
+}
 
+nav {
+    color: #fff;
+    background-color: #949494;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
 }
 
 .user-image-size {
