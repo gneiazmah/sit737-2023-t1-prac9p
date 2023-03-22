@@ -1,0 +1,25 @@
+{
+  "name": "sit737-p01",
+  "version": "1.0.0",
+  "description": "SIT737 Practical 01",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gneiazmah/SIT737-P01.git"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Azmah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gneiazmah/SIT737-P01/issues"
+  },
+  "homepage": "https://github.com/gneiazmah/SIT737-P01#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
