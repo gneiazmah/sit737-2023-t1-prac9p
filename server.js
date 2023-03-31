@@ -13,7 +13,7 @@ const logger = winston.createLogger({
     
     level: 'info',
     format: winston.format.json(),
-    defaultMeta: { service: 'calculate-service' },
+    defaultMeta: {service: 'calculate-service'},
     transports: [
       //
       // - Write all logs with importance level of `error` or less to `error.log`
@@ -24,22 +24,19 @@ const logger = winston.createLogger({
     ],
   });
   
-  //
-  // If we're not in production then log to the `console` with the format:
-  // `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
-  //
+  
   if (process.env.NODE_ENV !== 'production') {
     logger.add(new winston.transports.Console({
       format: winston.format.simple(),
     }));
   }
-const add= (n1,n2) => {
+const add = (n1,n2) => {
     return n1+n2;
 }
 app.get("/add", (req,res)=>{
     try{
-    const n1= parseFloat(req.query.n1);
-    const n2=parseFloat(req.query.n2);
+    const n1 = parseFloat(req.query.n1);
+    const n2 = parseFloat(req.query.n2);
     if(isNaN(n1)) {
         logger.error("n1 is incorrectly defined");
         throw new Error("n1 incorrectly defined");
