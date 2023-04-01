@@ -29,7 +29,20 @@ const logger = winston.createLogger({
     logger.add(new winston.transports.Console({
       format: winston.format.simple(),
     }));
+
+    logger.subtract(new winston.transports.Console({
+      format: winston.format.simple(),
+    }));
+
+    logger.multiply(new winston.transports.Console({
+      format: winston.format.simple(),
+    }));
+
+    logger.division(new winston.transports.Console({
+      format: winston.format.simple(),
+    }));
   }
+
 const add = (n1,n2) => {
     return n1+n2;
 }
@@ -150,6 +163,17 @@ app.get("/division", (req,res)=>{
       res.status(500).json({statuscocde:500, msg: error.toString() })
     }
 });
+
+// app.get('/addTwoNumbers/:firstNumber/:secondNumber', function(req,res,next){
+//   var firstNumber = parseInt(req.params.firstNumber) 
+//   var secondNumber = parseInt(req.params.secondNumber)
+//   var result = firstNumber + secondNumber || null
+//   if(result == null) {
+//     res.json({result: result, statusCode: 400}).status(400)
+//   }
+//   else { res.json({result: result, statusCode: 200}).status(200) } 
+// })
+
 
 
 var port = process.env.port || 4000;
