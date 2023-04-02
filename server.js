@@ -29,6 +29,18 @@ const logger = winston.createLogger({
     logger.add(new winston.transports.Console({
       format: winston.format.simple(),
     }));
+
+    logger.subtract(new winston.transports.Console({
+      format: winston.format.simple(),
+    }));
+
+    logger.multiply(new winston.transports.Console({
+      format: winston.format.simple(),
+    }));
+
+    logger.division(new winston.transports.Console({
+      format: winston.format.simple(),
+    }));
   }
 
 const add = (n1,n2) => {
