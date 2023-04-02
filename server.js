@@ -29,18 +29,6 @@ const logger = winston.createLogger({
     logger.add(new winston.transports.Console({
       format: winston.format.simple(),
     }));
-
-    logger.subtract(new winston.transports.Console({
-      format: winston.format.simple(),
-    }));
-
-    logger.multiply(new winston.transports.Console({
-      format: winston.format.simple(),
-    }));
-
-    logger.division(new winston.transports.Console({
-      format: winston.format.simple(),
-    }));
   }
 
 const add = (n1,n2) => {
@@ -73,6 +61,11 @@ app.get("/add", (req,res)=>{
       }
 });
 
+if (process.env.NODE_ENV !== 'production') {
+  logger.subtract(new winston.transports.Console({
+    format: winston.format.simple(),
+  }));
+}
 
 const subtract= (n1,n2) => {
   return n1-n2;
