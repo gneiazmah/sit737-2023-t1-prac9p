@@ -61,11 +61,6 @@ app.get("/add", (req,res)=>{
       }
 });
 
-if (process.env.NODE_ENV !== 'production') {
-  logger.subtract(new winston.transports.Console({
-    format: winston.format.simple(),
-  }));
-}
 
 const subtract= (n1,n2) => {
   return n1-n2;
