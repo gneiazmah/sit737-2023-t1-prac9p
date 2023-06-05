@@ -1,11 +1,13 @@
-FROM node:slim
+FROM node:16
 
-WORKDIR /app
+WORKDIR /user/src/app
 
-COPY . /app
+COPY package*.json ./
 
-RUN yarn install
+RUN npm install
+
+COPYserver.js .
 
 EXPOSE 8080
 
-CMD ["yarn", "start"]
+CMD ["node", "server.js"]
