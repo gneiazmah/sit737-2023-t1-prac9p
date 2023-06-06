@@ -1,12 +1,10 @@
-FROM node:16
+FROM node:14
 
-WORKDIR /user/src/app
+WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package*.json server.js ./
 
 RUN npm install
-
-COPYserver.js .
 
 EXPOSE 8080
 
