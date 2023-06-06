@@ -1,20 +1,5 @@
-var express = require("express");
-const req = require("express/lib/request");
-const res = require("express/lib/response");
-var app = express()
+const express = require("express")
 
-app.use(express.static(__dirname+'/public'))
-app.use(express.json());
-app.use(express.urlencoded({extends: false}))
-
-const app =express();
-app.get('/', (req, res)=>{
-  res.send('Hello World');
-}
-)
-
-var port = process.env.port || 8080;
-
-app.listen(port,()=>{
-    console.log("App listening to: http://localhost:"+port)
-})
+const app = express();
+app.get('/', (req, res)=> res.send('Hello World'))
+app.listen(8080, () => console.log('server ready'))
