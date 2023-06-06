@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: prac7p
-        image: spiky14/sit-737-prac7p:latest
+        image: sit-737-prac7p:latest
         resources:
           limits:
             memory: "128Mi"
