@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: prac7p
-        image: sit-737-prac7p:latest
+        image: node-app/examplenode:latest
         resources:
           limits:
             memory: "128Mi"
