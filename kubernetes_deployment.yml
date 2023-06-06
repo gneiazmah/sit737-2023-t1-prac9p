@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prac7p-deployment
+  labels:
+    app: prac7p
+spec:
+  selector:
+    matchLabels:
+      app: prac7p
+  template:
+    metadata:
+      labels:
+        app: prac7p
+    spec:
+      containers:
+      - name: prac7p
+        image: spiky14/sit-737-prac7p:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prac7p-service
+spec:
+  selector:
+    app: prac7p
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 31110
