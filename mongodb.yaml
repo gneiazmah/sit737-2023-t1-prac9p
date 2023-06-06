@@ -1,7 +1,0 @@
-apiVersion: mongodb.com/v1
-kind: mongoDB
-metadata:
-    name: my-mongodb
-    namespace: mongodb
-spec:
-    member: 1
